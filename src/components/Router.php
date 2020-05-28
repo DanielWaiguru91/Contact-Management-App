@@ -28,7 +28,7 @@ class Router{
                         if (Auth::userIsAuthenticated()) {
                             $this->requestRedirect('/profile');
                         }
-                        return new (Template('home'))->render();
+                        return (new Template('home'))->render();
                     }
                 };
             default:
@@ -38,7 +38,7 @@ class Router{
                         $this->requestRedirect('/');
                         return '';
                     }
-                }
+                };
         }
     }
 }
